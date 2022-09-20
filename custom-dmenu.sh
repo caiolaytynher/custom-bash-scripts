@@ -1,9 +1,9 @@
 #!/bin/sh
 
-normal_background="#282828"
-normal_foreground="#ebdbb2"
-selected_background="#d65d0e"
-selected_foreground="#ebdbb2"
+normal_background="#282a36"
+normal_foreground="#f8f8f2"
+selected_background="#bd93f9"
+selected_foreground="#f8f8f2"
 
 dmenu_run -i -nb $normal_background \
              -nf $normal_foreground \
