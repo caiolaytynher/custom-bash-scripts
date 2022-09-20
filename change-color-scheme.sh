@@ -10,6 +10,6 @@ elif [[ $chosen =~ "Gruvbox" ]]; then
 	color_scheme="gruvbox"
 fi
 
-app_path=$HOME/Documents/python/change-color-scheme/src/main.py
+app_path=$HOME/Documents/python/change-color-scheme/main.py
 
 python $app_path $color_scheme
