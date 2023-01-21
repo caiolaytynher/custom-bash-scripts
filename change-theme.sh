@@ -1,15 +1,25 @@
 #!/bin/sh
 
-color_schemes="Dracula\nGruvbox"
+themes="Dracula\nGruvbox\nCatppuccin\nTokyoNight\nEverforest\nKanagawa\nOneDark"
 theme_path=$HOME/.config/rofi/change-color-scheme.rasi
-chosen=$(printf $color_schemes | rofi -dmenu -i -p " " -theme $theme_path)
+chosen=$(printf $themes | rofi -dmenu -i -p " " -theme $theme_path)
 
 if [[ $chosen =~ "Dracula" ]]; then
-	color_scheme="dracula"
+	theme="dracula"
 elif [[ $chosen =~ "Gruvbox" ]]; then
-	color_scheme="gruvbox"
+	theme="gruvbox"
+elif [[ $chosen =~ "Catppuccin" ]]; then
+	theme="catppuccin"
+elif [[ $chosen =~ "TokyoNight" ]]; then
+	theme="tokyonight"
+elif [[ $chosen =~ "Everforest" ]]; then
+	theme="everforest"
+elif [[ $chosen =~ "Kanagawa" ]]; then
+	theme="kanagawa"
+elif [[ $chosen =~ "OneDark" ]]; then
+	theme="onedark"
 fi
 
 app_path=$HOME/Projects/python/change-theme/main.py
 
-python $app_path $color_scheme
+python $app_path $theme
