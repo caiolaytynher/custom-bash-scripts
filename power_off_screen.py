@@ -1,8 +1,28 @@
-#!/bin/sh
+#!/bin/python
 
-options="\n\n"
-main_screen_theme=$HOME/.config/rofi/power-off-screen.rasi
-confirmation_screen_theme=$HOME/.config/rofi/yes-or-no.rasi
+import os
+from enum import StrEnum
+from pathlib import Path
+
+
+
+
+class Option(StrEnum):
+    SHUTDOWN = ""
+    REBOOT = ""
+    LOGOUT = ""
+
+def get_option()
+
+MAIN_SCREEN_THEME = Path('~/.config/rofi/power-off-screen.rasi')
+CONFIRMATION_SCREEN_THEME = Path('~/.config/rofi/yes-or-no.rasi')
+
+def main() -> None:
+    option = execute(['a'])
+    desktop_session: str = os.environ.get('DESKTOP_SESSION')
+
+
+
 option=$(printf $options | rofi -dmenu -theme $main_screen_theme)
 
 if [[ -z $option ]]; then
